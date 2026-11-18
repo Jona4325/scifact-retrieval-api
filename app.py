@@ -72,6 +72,21 @@ class SearchRequest(BaseModel):
     top_k: int = Field(default=10, ge=1, le=100)
 
 
+@app.get("/")
+def root():
+    return {
+        "service": "SciFact Retrieval API",
+        "status": "ok",
+        "corpus": "SciFact",
+        "documents": N,
+        "endpoints": {
+            "health": "GET /health",
+            "search": "POST /search",
+            "documentation": "/docs",
+        },
+    }
+
+
 def retrieve(query, model, top_k):
     qfreq = Counter(tokenize(query))
     scores = defaultdict(float)
