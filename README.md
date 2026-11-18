@@ -9,7 +9,7 @@ app_port: 7860
 
 # SciFact Retrieval API
 
-API de recuperación sobre SciFact con BM25 y TF-IDF/coseno.
+Aplicación web y API de recuperación sobre SciFact con BM25 y TF-IDF/coseno. La página principal permite escribir consultas y comparar los dos modelos directamente en el navegador.
 
 - `GET /health`
 - `POST /search` con JSON: `{"query":"vitamin D cancer","model":"bm25","top_k":5}`
