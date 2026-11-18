@@ -1,6 +1,5 @@
 ---
 title: SciFact Retrieval API
-emoji: 
 colorFrom: blue
 colorTo: green
 sdk: docker
